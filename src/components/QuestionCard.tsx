@@ -36,10 +36,11 @@ const QuestionCard: React.FC<Props> = ({
             key={index}
             answered={answered === option}
             isCorrect={option === isCorrect}
+            disabled={!!answered.length}
           >
             <button
               onClick={() => answerHandler(option)}
-              disabled={answered === option}
+              disabled={!!answered.length}
             >
               {option}
             </button>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Loader from "react-loader-spinner";
 
-import { GlobalStyle, Wrapper } from "./App.styles";
+import { GlobalStyle, Wrapper, StyledImage } from "./App.styles";
 import QuestionCard from "./components/QuestionCard";
+import image from "./images/nattu-adnan.jpg";
 import { shuffleArray } from "./utils";
 
 interface Question {
@@ -77,6 +78,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <StyledImage src={image} alt="" />
       <Wrapper>
         <h1>REACT QUIZ</h1>
         {!quizStart && (

@@ -1,17 +1,21 @@
 import styled, { createGlobalStyle } from "styled-components";
-import image from "./images/nattu-adnan.jpg";
 
 export const GlobalStyle = createGlobalStyle`
-  body {
-    background-image: url(${image});
-    background-size: cover;
-  }
   * {
     font-family: 'Catamaran', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+`;
+
+export const StyledImage = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50%;
+  z-index: -1;
 `;
 
 export const Wrapper = styled.div`

@@ -27,10 +27,11 @@ export const QuestionCardLayout = styled.div`
 interface ButtonProps {
   answered: boolean;
   isCorrect: boolean;
+  disabled: boolean;
 }
 export const ButtonWrapper = styled.div<ButtonProps>`
   button {
-    cursor: pointer;
+    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
     user-select: none;
     font-size: 0.8rem;
     width: 100%;
